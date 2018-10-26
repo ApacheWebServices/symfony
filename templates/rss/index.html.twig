@@ -1,0 +1,12 @@
+{# templates/rss/index.html.twig #}
+{% extends 'layout.html.twig' %}
+
+{% block title %}Symphony RSS Demo{% endblock %}
+
+{% block body %}
+  <ul>
+    {% for item in articles %}
+      <li><a href="{{item.link}}" target="_blank">{{item.title}}</a></li>
+    {% endfor %}
+  </ul>
+{% endblock %}
